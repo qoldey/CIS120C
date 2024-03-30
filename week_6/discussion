@@ -1,0 +1,26 @@
+
+
+It seems like the main reason we would want an ordered array is to quickly search for something. Since we don't care about the order of our array, insertions and deleting are notably quicker in an unordered array.
+
+I dont think there is one type that is better since there are pros and cons to both data structures. It is important to think about what you need from your data before deciding how to store it.
+
+Module6Lab1:
+1) What is the underlying storage scheme for the ArrayList class?  Consult the Java 8 API.
+
+2) Is java.util.LinkedList<E> a singly- or doubly-linked list implementation of a linked list data structure?
+
+3) Estimate the big O cost of doubling the capacity of the fixed-length arrays ordArr and unOrdArr discussed in the reading.  This happens in the event that an insertion operation will overflow the capacity of the array.  What needs to happen?  What is the cost?
+
+4) Estimate the big O cost of searching an unsorted 2-dimensional square array (of size n) for a value.
+
+
+
+1) An arrayList uses the List interface to store various Objects in a dynamically expanding array. When Adding an element to an ArrayList, Java first checks for appropriate capacity in the target array; if more space is needed, then the grow() method is called, which uses the Arrays.copyOf() method to create a new array with the existing data and additional space that is needed.
+
+2) LinkedList<E> is a doubly-linked list implementation.
+
+3) ordArr = O(3)
+unOrdArr = O(3log2(n)+n/2 + 1) 
+
+4) O(n/2)
+

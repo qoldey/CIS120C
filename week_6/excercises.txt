@@ -1,0 +1,34 @@
+select * from class101 where name like 'K%'; -- Select all rows where name column begins with a K
+
+select * from class101 where name not like 'k%'; -- Select all rows where name column does not begin with a K
+
+select name,gpa from class101 where gpa > 4.35 AND gpa < 4.65; -- Show name and gpa columns of all matches with a gpa between 4.35 and 4.65
+
+select * from class101 where name like '%e%'; -- Select all rows where name column contains an e
+
+select * from class101 where name like '%e%' OR name like '%a%'; -- Select all rows where name contains an e or an a
+
+select * from class101 where name like '%e%' AND gpa > 4.5; --Select records with names having a letter 'e' and gpa ≥ 4.5.
+
+show databases; --Show all the databases
+
+create database if not exists ABCTrading; -- Create a new database called "ABCTrading".
+
+USE ABCTrading; --Set the "ABCTrading" database as the default database.
+
+show tables; --Show all the tables in the default database.
+
+create table products (id int, category char(3), name varchar(20), quantity int, price float); --Create a new table called "products" with the columns and type indicated below.
+
+describe products; --Show the table description.
+
+insert into products values (1001, 'PEN','Pen Red',5000,1.23); -- Insert the above records and list all the records.
+
+select * from products where name like '%Pencil%'; -- List records with name containing "Pencil".
+
+select * from products where price >= 1; --List records with price ≥ 1.0.
+
+update products set price = price * 1.10; select * from products; -- Increase the price of all items by 10%, and list all the records.
+
+delete from products where name like '%Pen Red%'; select * from products; -- Remove "Pen Red" from the table, and list all the records.
+

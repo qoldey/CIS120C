@@ -1,0 +1,18 @@
+
+In doing exercise 1 of section 1.4, exactly what changes did you make to the program in order to swap the implementation from LinkedList to ArrayList?  (State what you changed on which line numbers.)
+
+I had to change line #12 within the classes constructor to call for a new ArrayList() rather than a LinkedList().
+
+Does the test pass now?  Explain why.
+
+Yes, the test passes. This is because when creating our generic List object, we set it to an ArrayList object.
+
+To make this test pass, you only had to change the type stored in list to be  ArrayList in the constructor; you did not have to change any of the places where List appears. Why not?  What happens if you do? Go ahead and replace one or more appearances of List with ArrayList and report what happens.
+
+This is because both LinkedList and ArrayList are dependent of the List class therefore meeting the requirements of a List and can be used interchangably.
+
+In the ListClientExample constructor, what happens if you replace ArrayList with List? Why can’t you instantiate a List?
+
+When trying to replace ArrayList with type List, I receive the error "Cannot instantiate the type ListJava(16777373)" You must specify the type of list you want to use when assigning something to the List.
+
+
